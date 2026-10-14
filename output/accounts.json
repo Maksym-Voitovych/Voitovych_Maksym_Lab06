@@ -1,0 +1,16 @@
+[
+{
+  "account_number": "ACC-1001",
+  "client": "Petrenko",
+  "balance": 1500.0,
+  "operation": "deposit",
+  "amount": 500.0
+},
+{
+  "account_number": "ACC-1002",
+  "client": "Koval",
+  "balance": 1500.0,
+  "operation": "withdraw",
+  "amount": 500.0
+}
+]

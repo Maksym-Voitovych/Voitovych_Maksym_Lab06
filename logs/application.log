@@ -1,0 +1,16 @@
+2026-10-14 15:44:58,712 | INFO | bank_system.utils | Bank account import/export started
+2026-10-14 15:44:58,713 | WARNING | bank_system.services | Invalid record at line 2: Invalid account number
+2026-10-14 15:44:58,713 | WARNING | bank_system.services | Invalid record at line 3: Invalid account number
+2026-10-14 15:44:58,714 | WARNING | bank_system.services | Invalid record at line 4: Invalid account number
+2026-10-14 15:44:58,714 | INFO | bank_system.utils | Bank account import/export finished in 0.001672 s
+2026-10-14 15:44:58,714 | INFO | __main__ | Total=3, valid=0, invalid=3, exported=0
+2026-10-14 15:45:26,953 | INFO | bank_system.utils | Bank account import/export started
+2026-10-14 15:45:26,954 | WARNING | bank_system.services | Invalid record at line 2: Invalid account number
+2026-10-14 15:45:26,954 | WARNING | bank_system.services | Invalid record at line 3: Invalid account number
+2026-10-14 15:45:26,954 | WARNING | bank_system.services | Invalid record at line 4: Invalid account number
+2026-10-14 15:45:26,955 | INFO | bank_system.utils | Bank account import/export finished in 0.001934 s
+2026-10-14 15:45:26,956 | INFO | __main__ | Total=3, valid=0, invalid=3, exported=0
+2026-10-14 15:45:45,667 | INFO | bank_system.utils | Bank account import/export started
+2026-10-14 15:45:45,676 | WARNING | bank_system.services | Invalid record at line 4: Insufficient funds: operation results in negative balance
+2026-10-14 15:45:45,678 | INFO | bank_system.utils | Bank account import/export finished in 0.010833 s
+2026-10-14 15:45:45,678 | INFO | __main__ | Total=3, valid=2, invalid=1, exported=2
