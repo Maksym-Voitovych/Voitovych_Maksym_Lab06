@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "bank-system"
 version = "0.1.0"
-description = "Система банківських рахунків для лабораторної роботи №4"
+description = "Система банківських рахунків для лабораторної роботи"
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = []
@@ -13,10 +13,37 @@ dependencies = []
 [project.optional-dependencies]
 dev = [
     "mypy>=1.10",
+    "pytest>=8.0.0",
+    "pytest-cov>=5.0.0",
 ]
 
 [tool.setuptools.packages.find]
 where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+asyncio_mode = "strict"
+markers = [
+    "integration: mark test as integration test",
+]
+
+[tool.coverage.run]
+source = ["bank_system"]
+omit = [
+    "src/bank_system/data.py",
+    "src/bank_system/decorators.py",
+    "src/bank_system/streaming.py",
+    "src/bank_system/processors.py",
+    "src/bank_system/analytics.py",
+]
+
+[tool.coverage.report]
+exclude_lines = [
+    "pragma: no cover",
+    "if __name__ == '__main__':",
+    "raise NotImplementedError",
+]
+fail_under = 50
 
 [tool.mypy]
 python_version = "3.11"
@@ -24,7 +51,6 @@ strict = true
 warn_unused_ignores = true
 warn_return_any = true
 
-# Ігноруємо старі файли з 3-ї лаби, якщо вони не типізовані суворо
 [[tool.mypy.overrides]]
 module = "bank_system.data"
 ignore_errors = true
