@@ -1,11 +1,12 @@
 from contextlib import contextmanager
+from typing import Iterator
 import logging
 from time import perf_counter
 
 logger = logging.getLogger(__name__)
 
 @contextmanager
-def logged_operation(operation: str):
+def logged_operation(operation: str) -> Iterator[None]:
     logger.info("%s started", operation)
     start = perf_counter()
     try:

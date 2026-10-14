@@ -1,4 +1,5 @@
 import pytest
+import yaml  # type: ignore[import-untyped]
 from pathlib import Path
 from bank_system.models import BankAccount
 from bank_system.value_objects import Money

@@ -70,3 +70,6 @@ ignore_errors = true
 [[tool.mypy.overrides]]
 module = "bank_system.analytics"
 ignore_errors = true
+[[tool.mypy.overrides]]
+module = "yaml.*"
+ignore_missing_imports = true
