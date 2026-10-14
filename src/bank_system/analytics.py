@@ -1,7 +1,6 @@
 from collections import defaultdict, Counter, deque
 from .decorators import log_execution
 
-# Deque з обмеженою довжиною (пам'ятає тільки останні 5 операцій)
 operation_history = deque(maxlen=5)
 
 def add_to_history(action: str) -> None:
